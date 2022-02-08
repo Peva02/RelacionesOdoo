@@ -1,0 +1,186 @@
+<odoo>
+  <data>
+<!-- Vistas de departamentos-->
+
+    <record model="ir.ui.view" id="odoo670.departamentos670_list_view">
+      <field name="name">odoo670.departamentos670.view.tree</field>
+      <field name="model">odoo670.departamentos670</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="apellidos"/>
+        </tree>
+      </field>
+    </record>
+<!-- Vistas de empelados-->
+
+    <record model="ir.ui.view" id="odoo670.empleados670_list_view">
+      <field name="name">odoo670.empleados670.view.tree</field>
+      <field name="model">odoo670.empleados670</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="apellidos"/>
+        </tree>
+      </field>
+    </record>
+<!-- Vistas de supervisores-->
+
+    <record model="ir.ui.view" id="odoo670.supervisores670_list_view">
+      <field name="name">odoo670.supervisores670.view.tree</field>
+      <field name="model">odoo670.supervisores670</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="apellidos"/>
+        </tree>
+      </field>
+    </record>
+
+
+<!-- search departamentos670-->
+
+    <record model="ir.ui.view" id="odoo670.departamentos670_search_view">
+      <field name="name">odoo670.departamentos670.view.search</field>
+      <field name="model">odoo670.departamentos670</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="apellidos"/>
+          <group>
+            <filter name="group_by_apellidos" string="apellidos" context="{'gropup_by':'apellidos'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+<!-- search empleados-->
+    <record model="ir.ui.view" id="odoo670.empleados670_search_view">
+      <field name="name">odoo670.empleados670.view.search</field>
+      <field name="model">odoo670.empleados670</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="apellidos"/>
+          <group>
+            <filter name="group_by_apellidos" string="apellidos" context="{'gropup_by':'apellidos'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+<!-- search supervisores670-->
+    <record model="ir.ui.view" id="odoo670.supervisores670_search_view">
+      <field name="name">odoo670.supervisores670.view.search</field>
+      <field name="model">odoo670.supervisores670</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="apellidos"/>
+          <group>
+            <filter name="group_by_apellidos" string="apellidos" context="{'gropup_by':'apellidos'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+    
+    <!-- form departamentos-->
+    
+    <record model="ir.ui.view" id="odoo670.departamentos670_form_view">
+      <field name="name">odoo670.departamentos670.view.form</field>
+      <field name="model">odoo670.departamentos670</field>
+      <field name="arch" type="xml">
+        <form string="Información Departamento">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                Departamento <field name="name" placeholder="Nombre"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Datos"/>
+                <field name="apellidos" placeholder="Apellidos"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+ <!-- form empleados-->
+    
+    <record model="ir.ui.view" id="odoo670.empleados670_form_view">
+      <field name="name">odoo670.empleados670.view.form</field>
+      <field name="model">odoo670.empleados670</field>
+      <field name="arch" type="xml">
+        <form string="Información persona">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                Empleados <field name="name" placeholder="Nombre"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Datos"/>
+                <field name="apellidos" placeholder="Apellidos"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+ <!-- form supervisores670-->
+    
+    <record model="ir.ui.view" id="odoo670.supervisores670_form_view">
+      <field name="name">odoo670.supervisores670.view.form</field>
+      <field name="model">odoo670.supervisores670</field>
+      <field name="arch" type="xml">
+        <form string="Información Supervisor">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                Supervisores <field name="name" placeholder="Nombre"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Datos"/>
+                <field name="apellidos" placeholder="Apellidos"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+
+
+    <!-- Definición de menús-->
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="odoo670.empleados670_action_window">
+      <field name="name">empleados670</field>
+      <field name="res_model">odoo670.empleados670</field>
+    </record>
+     <record model="ir.actions.act_window" id="odoo670.departamentos670_action_window">
+      <field name="name">departamentos670</field>
+      <field name="res_model">odoo670.departamentos670</field>
+    </record>
+     <record model="ir.actions.act_window" id="odoo670.supervisores670_action_window">
+      <field name="name">supervisores670</field>
+      <field name="res_model">odoo670.supervisores670</field>
+    </record>
+
+    <menuitem name="odoo670" id="odoo670.menu_root"/>
+    <menuitem name="Empleados" id="odoo670.menu_empleados670" parent="odoo670.menu_root"/>
+    <menuitem name="Mostrar empleados" id="odoo670.menu_empleados670_list" parent="odoo670.menu_empleados670" action="odoo670.empleados670_action_window"/>
+<menuitem name="Mostrar supervisores" id="odoo670.menu_departamentos670_list" parent="odoo670.menu_empleados670" action="odoo670.departamentos670_action_window"/>
+<menuitem name="Mostrar departamentos" id="odoo670.menu_supervisores670_list" parent="odoo670.menu_empleados670" action="odoo670.supervisores670_action_window"/>
+  </data>
+</odoo>

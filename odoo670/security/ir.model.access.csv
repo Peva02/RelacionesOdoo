@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_odoo670_coches670_usuario,odoo670.coches670.usuario,model_odoo670_coches670,odoo670.group_odoo670_usuario,1,0,0,0
+access_odoo670_coches670_administrador,odoo670.coches670.administrador,model_odoo670_coches670,odoo670.group_odoo670_administrador,1,1,1,1
+
+access_odoo670_empleados670_usuario,odoo670.empleados670.usuario,model_odoo670_empleados670,odoo670.group_odoo670_usuario,1,0,0,0
+access_odoo670_empleados670_administrador,odoo670.empleados670.administrador,model_odoo670_empleados670,odoo670.group_odoo670_administrador,1,1,1,
+
+
+access_odoo670_clientes670_usuario,odoo670.clientes670.usuario,model_odoo670_clientes670,odoo670.group_odoo670_usuario,1,0,0,0
+access_odoo670_clientes670_administrador,odoo670.clientes670.administrador,model_odoo670_clientes670,odoo670.group_odoo670_administrador,1,1,1,1

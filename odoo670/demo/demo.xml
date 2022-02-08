@@ -1,0 +1,62 @@
+<odoo>
+    <data>
+<!--
+          <record id="object0" model="odoo670.odoo670">
+            <field name="name">Object 0</field>
+            <field name="value">0</field>
+          </record>
+
+          <record id="object1" model="odoo670.odoo670">
+            <field name="name">Object 1</field>
+            <field name="value">10</field>
+          </record>
+
+          <record id="object2" model="odoo670.odoo670">
+            <field name="name">Object 2</field>
+            <field name="value">20</field>
+          </record>
+
+          <record id="object3" model="odoo670.odoo670">
+            <field name="name">Object 3</field>
+            <field name="value">30</field>
+          </record>
+
+          <record id="object4" model="odoo670.odoo670">
+            <field name="name">Object 4</field>
+            <field name="value">40</field>
+          </record>
+-->
+        <record id="Coche1" model="odoo670.coches670">
+            <field name = "name">12345ABC</field>
+            <field name = "marca">Audi</field>
+            <field name ="precio">123456</field>
+        </record>
+        
+        <record id="Coche2" model="odoo670.coches670">
+            <field name = "name">54321YXZ</field>
+            <field name = "marca">Citroen</field>
+            <field name ="precio">12345</field>
+        </record>
+
+        <record id="Cliente1" model="odoo670.clientes670">
+            <field name = "name">Cliente1</field>
+            <field name = "apellidos">Apellido1</field>
+        </record>
+
+        <record id="Cliente2" model="odoo670.clientes670">
+            <field name = "name">Cliente2</field>
+            <field name = "apellidos">Apellido2</field>
+        </record>
+
+
+        <record id="Empleado1" model="odoo670.empleados670">
+            <field name = "name">Empleado1</field>
+            <field name = "apellidos">Apellido1</field>
+        </record>
+
+        <record id="Empleado2" model="odoo670.empleados670">
+            <field name = "name">Empleado2</field>
+            <field name = "apellidos">Apellido2</field>
+        </record>
+    </data>
+</odoo>

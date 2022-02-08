@@ -1,0 +1,200 @@
+<odoo>
+  <data>
+<!-- Vistas de coches-->
+    <record model="ir.ui.view" id="odoo670.coches670_list_view">
+      <field name="name">odoo670.coches670.view.tree</field>
+      <field name="model">odoo670.coches670</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="marca"/>
+          <field name="precio"/>
+         
+        </tree>
+      </field>
+    </record>
+
+<!-- Vistas de furgonetas-->
+    <record model="ir.ui.view" id="odoo670.furgonetas670_list_view">
+      <field name="name">odoo670.furgonetas670.view.tree</field>
+      <field name="model">odoo670.furgonetas670</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="marca"/>
+          <field name="precio"/>
+         
+        </tree>
+      </field>
+    </record>
+
+
+<!-- Vistas de vehiculos-->
+    <record model="ir.ui.view" id="odoo670.vehiculos670_list_view">
+      <field name="name">odoo670.vehiculos670.view.tree</field>
+      <field name="model">odoo670.vehiculos670</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="marca"/>
+          <field name="precio"/>
+         
+        </tree>
+      </field>
+    </record>
+
+
+
+<!-- search coches -->
+    <record model="ir.ui.view" id="odoo670.coches670_search_view">
+      <field name="name">odoo670.coches670.view.search</field>
+      <field name="model">odoo670.coches670</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="marca"/>
+          <field name="precio"/>
+          <group>
+            <filter name="group_by_marca" string="marca" context="{'gropup_by':'marca'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+<!-- search furgonetas670 -->
+    <record model="ir.ui.view" id="odoo670.furgonetas670_search_view">
+      <field name="name">odoo670.furgonetas670.view.search</field>
+      <field name="model">odoo670.furgonetas670</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="marca"/>
+          <field name="precio"/>
+          <group>
+            <filter name="group_by_marca" string="marca" context="{'gropup_by':'marca'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+<!-- search vehiculos -->
+    <record model="ir.ui.view" id="odoo670.coches670_search_view">
+      <field name="name">odoo670.vehiculos670.view.search</field>
+      <field name="model">odoo670.vehiculos670</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="marca"/>
+          <field name="precio"/>
+          <group>
+            <filter name="group_by_marca" string="marca" context="{'gropup_by':'marca'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+
+
+<!-- form coches-->
+    <record model="ir.ui.view" id="odoo670.coches670_form_view">
+      <field name="name">odoo670.coches670.view.form</field>
+      <field name="model">odoo670.coches670</field>
+      <field name="arch" type="xml">
+        <form string="Información del coche">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                Coches <field name="name" placeholder="Matricula del vehículo"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Datos"/>
+                <field name="marca" placeholder="Marca del vehículo"/>
+                <field name="precio" placeholder="Precio del vehículo"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+<!-- form furgonetas670-->
+    <record model="ir.ui.view" id="odoo670.furgonetas670_form_view">
+      <field name="name">odoo670.furgonetas670.view.form</field>
+      <field name="model">odoo670.furgonetas670</field>
+      <field name="arch" type="xml">
+        <form string="Información furgoneta">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                Furgoneta <field name="name" placeholder="Matricula del vehículo"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Datos"/>
+                <field name="marca" placeholder="Marca del vehículo"/>
+                <field name="precio" placeholder="Precio del vehículo"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+<!-- form vehiculos-->
+    <record model="ir.ui.view" id="odoo670.coches670_form_view">
+      <field name="name">odoo670.vehiculos670.view.form</field>
+      <field name="model">odoo670.vehiculos670</field>
+      <field name="arch" type="xml">
+        <form string="Información vehiculos">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                Coches <field name="name" placeholder="Matricula del vehículo"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Datos"/>
+                <field name="marca" placeholder="Marca del vehículo"/>
+                <field name="precio" placeholder="Precio del vehículo"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+
+
+
+
+    <!-- Definición de menús-->
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="odoo670.coches670_action_window">
+      <field name="name">coches670</field>
+      <field name="res_model">odoo670.coches670</field>
+    </record>
+    <record model="ir.actions.act_window" id="odoo670.vehiculos670_action_window">
+      <field name="name">vehiculos670</field>
+      <field name="res_model">odoo670.vehiculos670</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="odoo670.furgonetas670_action_window">
+      <field name="name">furgonetas670</field>
+      <field name="res_model">odoo670.furgonetas670</field>
+    </record>
+
+
+    <menuitem name="odoo670" id="odoo670.menu_root"/>
+    <menuitem name="Vehiculos" id="odoo670.menu_coches670" parent="odoo670.menu_root"/>
+    <menuitem name="Listar Coches" id="odoo670.menu_coches670_list" parent="odoo670.menu_coches670" action="odoo670.coches670_action_window"/>
+    <menuitem name="Listar Vehiculos" id="odoo670.menu_vehiculos670_list" parent="odoo670.menu_coches670" action="odoo670.vehiculos670_action_window"/>
+    <menuitem name="Listar Furgonetas" id="odoo670.menu_furgonetas670_list" parent="odoo670.menu_coches670" action="odoo670.furgonetas670_action_window"/>
+
+  </data>
+</odoo>

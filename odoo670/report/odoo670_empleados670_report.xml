@@ -1,0 +1,30 @@
+<odoo>
+    <record id="odoo670.empleados670_report" model="ir.actions.report">
+        <field name="name"> Informe de Vehículos</field>
+        <field name="model">odoo670.empleados670</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">odoo670.empleados670_report_view</field>
+        <field name="report_file">odoo670.empleados670_report</field>
+        <field name="binding_model_id" ref="model_odoo670_empleados670"/>
+        <field name="binding_type">report</field>
+
+    </record>
+
+    <template id="empleados670_report_view">
+        <t t-call="web.html_container">
+            <!-- muestra datos de la empresa (salta página) -->
+            <t t-call="web.external_layout">
+                <h1>empleados </h1><br />
+                <t t-foreach="docs" t-as="empleados670">
+                    <ul>
+                        <li>Nombre <span t-field="empleados670.name" /></li>
+                        <li>Apellidos <span t-field="empleados670.apellidos" /></li>
+
+                    </ul>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>
+

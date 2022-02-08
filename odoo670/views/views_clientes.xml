@@ -1,0 +1,242 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="odoo670.list">
+      <field name="name">odoo670 list</field>
+      <field name="model">odoo670.odoo670</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="odoo670.action_window">
+      <field name="name">odoo670 window</field>
+      <field name="res_model">odoo670.odoo670</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="odoo670.action_server">
+      <field name="name">odoo670 server</field>
+      <field name="model_id" ref="model_odoo670_odoo670"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="odoo670" id="odoo670.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="odoo670.menu_1" parent="odoo670.menu_root"/>
+    <menuitem name="Menu 2" id="odoo670.menu_2" parent="odoo670.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="odoo670.menu_1_list" parent="odoo670.menu_1"
+              action="odoo670.action_window"/>
+    <menuitem name="Server to list" id="odoo670" parent="odoo670.menu_2"
+              action="odoo670.action_server"/>
+-->
+
+
+<!-- Vistas de clientes-->
+
+    <record model="ir.ui.view" id="odoo670.clientes670_list_view">
+      <field name="name">odoo670.clientes670.view.tree</field>
+      <field name="model">odoo670.clientes670</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="apellidos"/>
+        </tree>
+      </field>
+    </record>
+<!-- Vistas de andalucia-->
+
+    <record model="ir.ui.view" id="odoo670.andalucia670_list_view">
+      <field name="name">odoo670.andalucia670.view.tree</field>
+      <field name="model">odoo670.andalucia670</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="apellidos"/>
+        </tree>
+      </field>
+    </record>
+<!-- Vistas de madrid670-->
+
+    <record model="ir.ui.view" id="odoo670.madrid670_list_view">
+      <field name="name">odoo670.madrid670.view.tree</field>
+      <field name="model">odoo670.madrid670</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="apellidos"/>
+        </tree>
+      </field>
+    </record>
+
+<!-- search clientes-->
+    <record model="ir.ui.view" id="odoo670.clientes670_search_view">
+      <field name="name">odoo670.clientes670.view.search</field>
+      <field name="model">odoo670.clientes670</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="apellidos"/>
+          <group>
+            <filter name="group_by_apellidos" string="apellidos" context="{'gropup_by':'apellidos'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+<!-- search andalucia670-->
+    <record model="ir.ui.view" id="odoo670.andalucia670_search_view">
+      <field name="name">odoo670.andalucia670.view.search</field>
+      <field name="model">odoo670.andalucia670</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="apellidos"/>
+          <group>
+            <filter name="group_by_apellidos" string="apellidos" context="{'gropup_by':'apellidos'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+<!-- search madrid670-->
+    <record model="ir.ui.view" id="odoo670.madrid670_search_view">
+      <field name="name">odoo670.madrid670.view.search</field>
+      <field name="model">odoo670.madrid670</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="apellidos"/>
+          <group>
+            <filter name="group_by_apellidos" string="apellidos" context="{'gropup_by':'apellidos'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+    
+    <!-- form clientes-->
+    <record model="ir.ui.view" id="odoo670.clientes670_form_view">
+      <field name="name">odoo670.clientes670.view.form</field>
+      <field name="model">odoo670.clientes670</field>
+      <field name="arch" type="xml">
+        <form string="Información persona">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                Clientes <field name="name" placeholder="Nombre"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Datos"/>
+                <field name="apellidos" placeholder="Apellidos"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+<!-- form andalucia670-->
+    <record model="ir.ui.view" id="odoo670.andalucia670_form_view">
+      <field name="name">odoo670.andalucia670.view.form</field>
+      <field name="model">odoo670.andalucia670</field>
+      <field name="arch" type="xml">
+        <form string="Información cliente andalucia">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                Clientes <field name="name" placeholder="Nombre"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Datos"/>
+                <field name="apellidos" placeholder="Apellidos"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+<!-- form madrid670-->
+    <record model="ir.ui.view" id="odoo670.madrid670_form_view">
+      <field name="name">odoo670.madrid670.view.form</field>
+      <field name="model">odoo670.madrid670</field>
+      <field name="arch" type="xml">
+        <form string="Información cliente madrid">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                Clientes <field name="name" placeholder="Nombre"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Datos"/>
+                <field name="apellidos" placeholder="Apellidos"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+
+
+
+
+
+    <!-- Definición de menús-->
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="odoo670.clientes670_action_window">
+      <field name="name">clientes670</field>
+      <field name="res_model">odoo670.clientes670</field>
+    </record>
+    <record model="ir.actions.act_window" id="odoo670.andalucia670_action_window">
+      <field name="name">andalucia670</field>
+      <field name="res_model">odoo670.andalucia670</field>
+    </record>
+     <record model="ir.actions.act_window" id="odoo670.madrid670_action_window">
+      <field name="name">madrid670</field>
+      <field name="res_model">odoo670.madrid670</field>
+    </record>
+
+    <menuitem name="odoo670" id="odoo670.menu_root"/>
+    <menuitem name="Clientes" id="odoo670.menu_clientes670" parent="odoo670.menu_root"/>
+    <menuitem name="Mostrar clientes" id="odoo670.menu_clientes670_list" parent="odoo670.menu_clientes670" action="odoo670.clientes670_action_window"/>
+    <menuitem name="Mostrar andalucia" id="odoo670.menu_andalucia670_list" parent="odoo670.menu_clientes670" action="odoo670.andalucia670_action_window"/>
+    <menuitem name="Mostrar madrid" id="odoo670.menu_madrid670_list" parent="odoo670.menu_clientes670" action="odoo670.madrid670_action_window"/>
+  </data>
+</odoo>
